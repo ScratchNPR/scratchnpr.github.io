@@ -110,4 +110,7 @@ body {
   position:absolute;
   top:375px;
   left:10px;
+  color:#444;
+  font-family:Lora;
+  text-decoration:none;
 }
