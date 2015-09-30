@@ -3,43 +3,50 @@ var images = [
     new: './img/dreams.png',
     old: './img/nprguy.jpg',
     name: 'Dreams',
-    link: 'https://scratch.mit.edu/projects/78207862/'
+    link: 'https://scratch.mit.edu/projects/78207862/',
+    author: 'Layzej'
   },
   {
     new: './img/chalkboard-drawing.png',
     old: './img/nprguy.jpg',
     name: 'Chalkboard Drawing',
-    link: 'https://scratch.mit.edu/projects/76580404/'
+    link: 'https://scratch.mit.edu/projects/76580404/',
+    author: 'PullJosh'
   },
   {
     new: './img/stamped-brush.png',
     old: './img/nprguy.jpg',
     name: 'Stamped Brush',
-    link: 'https://scratch.mit.edu/projects/75561094/'
+    link: 'https://scratch.mit.edu/projects/75561094/',
+    author: 'Layzej'
   },
   {
     new: './img/polyart.png',
     old: './img/nprguy.jpg',
     name: 'Polyart',
-    link: 'https://scratch.mit.edu/projects/76558888/'
+    link: 'https://scratch.mit.edu/projects/76558888/',
+    author: 'Really_A'
   },
   {
     new: './img/night-vision.png',
     old: './img/nprguy.jpg',
     name: 'Night Vision',
-    link: 'https://scratch.mit.edu/projects/75861350/'
+    link: 'https://scratch.mit.edu/projects/75861350/',
+    author: 'Yoda3D'
   },
   {
     new: './img/sponge-paint.png',
     old: './img/nprguy.jpg',
     name: 'Sponge Paint',
-    link: 'https://scratch.mit.edu/projects/78119508/'
+    link: 'https://scratch.mit.edu/projects/78119508/',
+    author: 'Layzej'
   },
   {
     new: './img/magnitude-experiment.png',
     old: './img/nprguy.jpg',
     name: 'Magnitude Experiment',
-    link: 'https://scratch.mit.edu/projects/78043302/'
+    link: 'https://scratch.mit.edu/projects/78043302/',
+    author: 'chooper-beta'
   }
 ];
 var currentImg;
@@ -71,6 +78,7 @@ function openLight(n) {
   lightElem.innerHTML = "<img src='" + images[n].new + "' class='finalImg'>";
   lightElem.innerHTML += "<img src='" + images[n].old + "' class='oldImg'>";
   lightElem.innerHTML += "<a href='" + images[n].link + "'>" + images[n].name + "</a>";
+  lightElem.innerHTML += "<p>By " + images[n].author + "</p>";
   addClass(lightElem, "visible");
   currentImg = n;
 }
