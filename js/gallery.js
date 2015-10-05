@@ -1,35 +1,54 @@
 var images = [
   {
+    new: './img/etf-stamper.png',
+    name: 'ETF Stamper',
+    link: 'https://scratch.mit.edu/projects/78729910/',
+    author: 'BookOwl'
+  },
+  {
+    new: './img/posterize-griffpatch.png',
+    name: 'Selective Posterization',
+    link: 'https://scratch.mit.edu/projects/75595518/',
+    author: 'griffpatch'
+  },
+  {
+    new: './img/obama-posterizer.png',
+    name: 'Obama Posterizer',
+    link: 'https://scratch.mit.edu/projects/78850462/',
+    author: 'EpicGuy369'
+  },
+  {
+    new: './img/npr-pencil-sketch.png',
+    name: 'NPR Pencil Sketch',
+    link: 'https://scratch.mit.edu/projects/78545064/',
+    author: 'chooper100'
+  },
+  {
     new: './img/dreams.png',
-    old: './img/nprguy.jpg',
     name: 'Dreams',
     link: 'https://scratch.mit.edu/projects/78207862/',
     author: 'Layzej'
   },
   {
     new: './img/chalkboard-drawing.png',
-    old: './img/nprguy.jpg',
     name: 'Chalkboard Drawing',
     link: 'https://scratch.mit.edu/projects/76580404/',
     author: 'PullJosh'
   },
   {
     new: './img/stamped-brush.png',
-    old: './img/nprguy.jpg',
     name: 'Stamped Brush',
     link: 'https://scratch.mit.edu/projects/75561094/',
     author: 'Layzej'
   },
   {
     new: './img/polyart.png',
-    old: './img/nprguy.jpg',
     name: 'Polyart',
     link: 'https://scratch.mit.edu/projects/76558888/',
     author: 'Really_A'
   },
   {
     new: './img/night-vision.png',
-    old: './img/nprguy.jpg',
     name: 'Night Vision',
     link: 'https://scratch.mit.edu/projects/75861350/',
     author: 'Yoda3D'
@@ -43,7 +62,6 @@ var images = [
   },
   {
     new: './img/magnitude-experiment.png',
-    old: './img/nprguy.jpg',
     name: 'Magnitude Experiment',
     link: 'https://scratch.mit.edu/projects/78043302/',
     author: 'chooper-beta'
@@ -75,8 +93,8 @@ function removeClass(ele,cls) {
 function openLight(n) {
   var lightElem = document.getElementById("lightBox");
   
+  
   lightElem.innerHTML = "<img src='" + images[n].new + "' class='finalImg'>";
-  lightElem.innerHTML += "<img src='" + images[n].old + "' class='oldImg'>";
   lightElem.innerHTML += "<a href='" + images[n].link + "'>" + images[n].name + "</a>";
   lightElem.innerHTML += "<p>By " + images[n].author + "</p>";
   addClass(lightElem, "visible");
@@ -95,6 +113,6 @@ var msnry = new Masonry( elem, {
   // options
   itemSelector: '.grid-item',
   columnWidth: 200,
-  gutter:10,
-  isOriginLeft: false
+  gutter:20,
+  isOriginLeft: true
 });
