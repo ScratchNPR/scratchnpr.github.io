@@ -96,7 +96,7 @@ function openLight(n) {
   
   lightElem.innerHTML = "<img src='" + images[n].new + "' class='finalImg'>";
   lightElem.innerHTML += "<a href='" + images[n].link + "'>" + images[n].name + "</a>";
-  lightElem.innerHTML += "<p>By " + images[n].author + "</p>";
+  lightElem.innerHTML += "<p>by " + images[n].author + "</p>";
   addClass(lightElem, "visible");
   currentImg = n;
 }
