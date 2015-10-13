@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
+body {
+  background:#222228;
+  padding: 15px;
+}
+
+.arttitle {
+  color: white;
+  font-family: "Lora";
+  text-align: center;
+}
+.artauther {
+  color: white;
+  font-family: "Lora";
+  text-align: center;
+}
+
+#info {
+  width: 400px;
+  margin: 0 auto;
+}
+#title {
+  color: white;
+  font-size: 750%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  /*padding-left: 60px;*/
+  margin-bottom: 0px;
+}
+
+#desc {
+  color:rgba(255,255,255,0.7);
+  font-family: 'Lora', serif;
+}
+
+/* position dots in gallery */
+.flickity-page-dots {
+  bottom: 0px;
+}
+
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+/* margin between cells */
+.gallery-cell {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.is-selected {
+  border: 5px solid yellow;
+}
