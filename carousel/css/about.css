@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
+body {
+  background:#222228;
+  padding: 15px;
+}
+
+a {
+  color:rgba(255,255,255,0.7);
+  font-family: 'Lora', serif;
+}
+
+#title {
+  color: white;
+  font-size: 500%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  /*padding-left: 60px;*/
+  margin-bottom: -10px;
+}
+
+#desc {
+  color:rgba(255,255,255,0.7);
+  font-family: 'Lora', serif;
+}
+
+h2 {
+  color: white;
+  font-size: 300%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-bottom: -10px;
+}

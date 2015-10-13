@@ -3,7 +3,7 @@ var info = document.getElementById("info");
 
 gallery.innerHTML = "";
 for (var i = 0; i < images.length; i++){
-  gallery.innerHTML += "<div class='gallery-cell'><img src='." + images[i].new + "' alt='" + images[i].name + "' /></div>";
+  gallery.innerHTML += "<img class='gallery-cell' src='." + images[i].new + "' alt='" + images[i].name + "' />";
   //console.log(gallery.innerHTML);
 }
 
@@ -37,7 +37,7 @@ setTimeout( (function(){
   var flkity = new Flickity('.gallery', {
     wrapAround: true,
     //freeScroll: true,
-    autoPlay: 4000 //milliseconds
+    //autoPlay: 4000 //milliseconds
   });
   
   function ondragstart(){
@@ -55,7 +55,7 @@ setTimeout( (function(){
   flkity.on("dragStart", ondragstart);
   flkity.on("cellSelect", ondragstart);
   flkity.on("settle", onsettle);
-}),500);
+}),1250);
 
 
 
