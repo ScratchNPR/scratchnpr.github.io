@@ -26,6 +26,7 @@ function unfade(element) {
     var timer = setInterval(function () {
         if (op >= 1){
             clearInterval(timer);
+            element.style.display =  'initial';
         }
         element.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
