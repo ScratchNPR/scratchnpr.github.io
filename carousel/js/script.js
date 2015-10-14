@@ -1,9 +1,11 @@
+"use strict";
+
 var gallery = document.getElementById("gallery");
 var info = document.getElementById("info");
 
 gallery.innerHTML = "";
 for (var i = 0; i < images.length; i++){
-  gallery.innerHTML += "<img class='gallery-cell' src='." + images[i].new + "' alt='" + images[i].name + "' />";
+  gallery.innerHTML += "<img class='gallery-cell' data-flickity-lazyload='." + images[i].new + "' alt='" + images[i].name + "' />";
   //console.log(gallery.innerHTML);
 }
 
@@ -34,29 +36,29 @@ function unfade(element) {
     }, 10);
 }
 
-setTimeout( (function(){
-  var flkity = new Flickity('.gallery', {
-    wrapAround: true,
-    //freeScroll: true,
-    //autoPlay: 4000 //milliseconds
-  });
-  
-  function ondragstart(){
-    fade(info);
-    info.innerHTML = '';
-  }
-  function onsettle(){
-    var i = flkity.selectedIndex;
-    info.innerHTML = '';
-    info.innerHTML += "<h1 class='arttitle'>" + images[i].name + "</h1>";
-    info.innerHTML += "<h2 class='artauther'>by " + images[i].author + "</h2>";
-    unfade(info);
-  }
-  onsettle();
-  flkity.on("dragStart", ondragstart);
-  flkity.on("cellSelect", ondragstart);
-  flkity.on("settle", onsettle);
-}),1250);
+
+var flkity = new Flickity('.gallery', {
+  wrapAround: true,
+  lazyLoad: Math.ceil(images.length/2),
+  //freeScroll: true,
+  //autoPlay: 4000 //milliseconds
+});
+
+function ondragstart(){
+  fade(info);
+  info.innerHTML = '';
+}
+function onsettle(){
+  var i = flkity.selectedIndex;
+  info.innerHTML = '';
+  info.innerHTML += "<h1 class='arttitle'>" + images[i].name + "</h1>";
+  info.innerHTML += "<h2 class='artauther'>by " + images[i].author + "</h2>";
+  unfade(info);
+}
+onsettle();
+flkity.on("dragStart", ondragstart);
+flkity.on("cellSelect", ondragstart);
+flkity.on("settle", onsettle);
 
 
 

@@ -16,17 +16,25 @@ a {
   font-size: 500%;
   font-family: 'PT Sans Narrow', sans-serif;
   /*padding-left: 60px;*/
-  margin-bottom: -10px;
+  margin-bottom: 0px;
 }
 
-#desc {
+p {
   color:rgba(255,255,255,0.7);
   font-family: 'Lora', serif;
+  margin-bottom: -10px;
 }
 
 h2 {
   color: white;
   font-size: 300%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-bottom: -10px;
+}
+
+h3 {
+  color: white;
+  font-size: 200%;
   font-family: 'PT Sans Narrow', sans-serif;
   margin-bottom: -10px;
 }

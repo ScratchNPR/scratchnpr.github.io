@@ -67,5 +67,5 @@ a {
   max-height: auto;
 }
 .is-selected {
-  border: 5px solid yellow;
+  /*border: 5px solid yellow;*/
 }
